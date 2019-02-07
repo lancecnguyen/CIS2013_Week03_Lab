@@ -11,16 +11,23 @@ int main(){
 	cout << "Our C++ Calculator\n";
 	
 while('n' != again){
-	cout << "(A)add or (S)subtract?";
+	cout << "(A)add or (S)subtract or (M)multiply?";
 	cin >> op;
 	
-	cout << "Enter first number to add: ";
+	cout << "Enter first number: ";
 	cin >> num1;
-	cout << "Enter second number to add: ";
+	cout << "Enter second number: ";
 	cin >> num2;
 	
-	cout << num1 << " + " << num2 << " = " << (num1 + num2) << endl;
-	
+	if(('A' == op) || ('a' == op)){
+		cout << num1 << " + " << num2 << " = " << (num1 + num2) << endl;
+	} else if(('S' == op) || ('s' == op)){
+		cout << num1 << " - " << num2 << " = " << (num1 - num2) << endl;
+	} else if(('M' == op) || ('m' == op)){
+		cout << num1 << " * " << num2 << " = " << (num1 * num2) << endl;
+	} else {
+		cout << op << " is not a valid option..." << endl;
+		}
 	cout << endl << "Do you want to use Calculator again (Y/n)?";
 	cin >> again;
 	}
