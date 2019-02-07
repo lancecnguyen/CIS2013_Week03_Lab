@@ -18,7 +18,7 @@ int main(){
 	cout << "Our C++ Calculator\n";
 	
 	do{
-		cout << "(A)add or (S)subtract?";
+		cout << "(A)add or (S)subtract? or (M)multiply or (D)divine" << endl;
 		cin >> op;
 		
 		switch ( op ){
@@ -34,6 +34,18 @@ int main(){
 				cout << endl << num1 << " - "
 					<< num2 << " = " << ( num1 - num2) << endl;
 					break;
+			case 'm':
+			case 'M':
+			printoptions();
+				cout << endl << num1 << " * "
+					<< num2 << " = " << ( num1 * num2) << endl;
+					break;
+			case 'd':
+			case 'D':
+			printoptions();
+				cout << endl << num1 << " / "
+					<< num2 << " = " << ( num1 / num2) << endl;
+					break;		
 			default:
 				cout << op << " is not a valid option..." << endl;
 		}
